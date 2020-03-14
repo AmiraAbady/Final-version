@@ -1,0 +1,12 @@
+<mat-accordion>
+  <mat-expansion-panel >
+    <mat-expansion-panel-header>
+      {{ postsService.fetchedPost.title}}
+    </mat-expansion-panel-header>
+    <p>{{ postsService.fetchedPost.content }}</p>
+    <mat-action-row>
+      <a mat-button color="primary"  (click)="onEdit(postsService.fetchedPost)" >EDIT</a> 
+      <button mat-button color="warn" (click)="onDelete(postsService.fetchedPost.id)">DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
